@@ -1,0 +1,30 @@
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 200px;
+    }
+
+    .banner__imagem {
+        width: 200px;
+    }
+
+    .banner {
+        margin-top: 10px;
+        height: auto;
+    }
+
+    .selecionado__talisman-descricao {
+        width: 70%;
+    }
+
+
+    .talisman > img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .talisman > img {
+        width: 90px;
+    }
+    
+}

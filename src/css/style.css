@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fonte-principal: font-family: "EB Garamond", serif;
+}
+
+main {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 186, 73, 1) 100%);
+    height: 100vh;
+}
+
+h1 {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.logo{
+    position: relative;
+    left: -15px;
+    width: 300px;
+}
+
+.banner {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner__imagem {
+    width: 350px;
+}
+
+.instrucao {
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.selecionado__talisman-imagem {
+    width: 400px;
+}
+
+.selecionado__talisman-titulo {
+    text-transform: capitalize;
+    font-family: var(--fonte-principal);
+    font-weight: bold;
+    font-size: 28px;
+    background-color: rgba(255, 255, 255, .7);
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.selecionado__talisman-descricao {
+    width: 600px;
+    font-family: var(--fonte-principal);
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 20px;
+}
+
+.container__talismans {
+    height: 20vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+}
+
+.talisman>img {
+    width: 120px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.talisman:hover {
+    transform: scale(1.2);
+}

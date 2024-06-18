@@ -1,0 +1,1 @@
+Oi, criei esse projeto para praticar as linguagens de HTML, CSS, e JavaScript. O projeto se chama *Talismãs - Jackie Chan* contém os 12(Doze) talismãs do desenho animado Jackie Chan Adventure. Basta clicar para ver mais detalhes.
