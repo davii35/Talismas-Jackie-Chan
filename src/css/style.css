@@ -7,8 +7,8 @@
     --fonte-principal: font-family: "EB Garamond", serif;
 }
 
-main {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 186, 73, 1) 100%);
+body {
+    background: url(../image/bg.jpg) center/cover no-repeat;
     height: 100vh;
 }
 
@@ -17,7 +17,7 @@ h1 {
     text-align: center;
 }
 
-.logo{
+.logo {
     position: relative;
     left: -15px;
     width: 300px;
