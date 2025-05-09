@@ -1,3 +1,8 @@
+const talismanImg = document.querySelector(".talisman-selecionado__img");
+const talismanNome = document.querySelector(".talisman-selecionado__nome");
+const talismanDescricao = document.querySelector(".talisman-selecionado__descricao");
+const listaTalismans = document.querySelector(".lista-talismans");
+
 const talismans = document.querySelectorAll(".talisman");
 const banner = document.getElementById("banner");
 let talismanAtual;
