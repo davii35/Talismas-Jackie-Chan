@@ -71,10 +71,17 @@ function alternaExibicaoCentro(conteudo) {
     centro.classList.value = `centro ${conteudo}`;
 }
 
+function exibeTalisman(indice) {
+    talismanImg.src = `src/image/talismans/${talismansDados[indice].animal}.webp`;
+    talismanImg.alt = talismansDados[indice].nome;
+    talismanNome.textContent = talismansDados[indice].nome;
+    talismanDescricao.textContent = talismansDados[indice].descricao;
+}
+
 function identificaClique(target) {
     if (target.classList.contains("talisman")) {
         const indice = target.parentElement.style.getPropertyValue("--indice-talisman")
-        // exibeTalisman(indice);
+        exibeTalisman(indice);
         alternaExibicaoCentro("talisman");
     } else {
         alternaExibicaoCentro("default");
