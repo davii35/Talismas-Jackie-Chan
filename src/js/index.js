@@ -53,3 +53,14 @@ const talismansDados = {
     descricao: 'Dá equilíbrio espiritual ao seu usuário, o fazendo controlar seu lado bom e mau. Mas, no desenho o talismã se partiu ao meio, dando a capacidade de separar o Yin e o Yang do usuário. Foi encontrado em uma competição de "quem come mais torta", nos Estados Unidos.'
   }
 };
+
+function identificaClique(target) {
+    if (target.classList.contains("talisman")) {
+        const indice = target.parentElement.style.getPropertyValue("--indice-talisman")
+        exibeTalisman(indice);
+    } else {}
+}
+
+window.addEventListener("click", (event) => {
+    identificaClique(event.target);
+})
