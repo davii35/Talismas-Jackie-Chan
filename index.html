@@ -14,28 +14,31 @@
 </head>
 
 <body>
-    <main>
-        <h1>
-            <img src="src/image/logo.png" alt="Jackie Chan Adventures" class="logo">
-        </h1>
-        <section class="banner" id="banner">
-            <img src="src/image/banner.webp" alt="Jackie e Jade sobre fundo do talismã do dragão"
-                class="banner__imagem">
-        </section>
-        <p class="instrucao" id="instrucao">Clique nos talismãs e veja mais detalhes.</p>
-        <ul class="container__talismans">
-            <li class="talisman"><img src="src/image/galo.webp" alt="Talismã do galo"></li>
-            <li class="talisman"><img src="src/image/touro.webp" alt="Talismã do Touro"></li>
-            <li class="talisman"><img src="src/image/serpente.webp" alt="Talismã da Serpente"></li>
-            <li class="talisman"><img src="src/image/coelho.webp" alt="Talismã do Coelho"></li>
-            <li class="talisman"><img src="src/image/ovelha.webp" alt="Talismã da Ovelha"></li>
-            <li class="talisman"><img src="src/image/dragao.webp" alt="Talismã do Dragão"></li>
-            <li class="talisman"><img src="src/image/rato.webp" alt="Talismã do Rato"></li>
-            <li class="talisman"><img src="src/image/cavalo.webp" alt="Talismã do Cavalo"></li>
-            <li class="talisman"><img src="src/image/macaco.webp" alt="Talismã do Macaco"></li>
-            <li class="talisman"><img src="src/image/cachorro.webp" alt="Talismã do Cachorro"></li>
-            <li class="talisman"><img src="src/image/porco.webp" alt="Talismã do Porco"></li>
-            <li class="talisman"><img src="src/image/tigre.webp" alt="Talismã do Tigre"></li>
+    <main class="container-conteudo">
+        <div class="centro default">
+            <div class="centro__default">
+                <h1><img class="logo" src="./src/image/logo.png" alt="Jackie Chan Adventures"></h1>
+                <p class="instrucao">Clique nos talismãs e veja mais detalhes.</p>
+            </div>
+            <div class="centro__talisman-selecionado">
+                <img class="talisman-selecionado__img">
+                <h2 class="talisman-selecionado__nome"></h2>
+                <p class="talisman-selecionado__descricao"></p>
+            </div>
+        </div>
+        <ul class="lista-talismans">
+            <li class="container-talisman" style="--indice-talisman: 1"><img class="talisman" src="src/image/talismans/galo.webp" alt="Talisman do galo"></li>
+            <li class="container-talisman" style="--indice-talisman: 2"><img class="talisman" src="src/image/talismans/touro.webp" alt="Talisman do Touro"></li>
+            <li class="container-talisman" style="--indice-talisman: 3"><img class="talisman" src="src/image/talismans/serpente.webp" alt="Talisman da Serpente"></li>
+            <li class="container-talisman" style="--indice-talisman: 4"><img class="talisman" src="src/image/talismans/coelho.webp" alt="Talisman do Coelho"></li>
+            <li class="container-talisman" style="--indice-talisman: 5"><img class="talisman" src="src/image/talismans/ovelha.webp" alt="Talisman da Ovelha"></li>
+            <li class="container-talisman" style="--indice-talisman: 6"><img class="talisman" src="src/image/talismans/dragao.webp" alt="Talisman do Dragão"></li>
+            <li class="container-talisman" style="--indice-talisman: 7"><img class="talisman" src="src/image/talismans/rato.webp" alt="Talisman do Rato"></li>
+            <li class="container-talisman" style="--indice-talisman: 8"><img class="talisman" src="src/image/talismans/cavalo.webp" alt="Talisman do Cavalo"></li>
+            <li class="container-talisman" style="--indice-talisman: 9"><img class="talisman" src="src/image/talismans/macaco.webp" alt="Talisman do Macaco"></li>
+            <li class="container-talisman" style="--indice-talisman: 10"><img class="talisman" src="src/image/talismans/cachorro.webp" alt="Talisman do Cachorro"></li>
+            <li class="container-talisman" style="--indice-talisman: 11"><img class="talisman" src="src/image/talismans/porco.webp" alt="Talisman do Porco"></li>
+            <li class="container-talisman" style="--indice-talisman: 12"><img class="talisman" src="src/image/talismans/tigre.webp" alt="Talisman do Tigre"></li>
         </ul>
     </main>
     <script src="src/js/index.js"></script>

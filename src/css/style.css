@@ -1,90 +1,114 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-    --fonte-principal: font-family: "EB Garamond", serif;
+    --fonte-principal: "EB Garamond", serif;
+    font-size: 10px;
 }
 
 body {
     background: url(../image/bg.jpg) center/cover no-repeat;
     height: 100vh;
+    padding: 5px;
+    display: grid;
+    place-content: center;
 }
 
-h1 {
-    margin-top: 25px;
-    text-align: center;
-}
-
-.logo {
+.container-conteudo {
     position: relative;
-    left: -15px;
-    width: 300px;
 }
 
-.banner {
-    height: 50vh;
+.centro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: grid;
+    place-content: center;
+}
+
+.centro.default>.centro__talisman-selecionado {
+    display: none;
+}
+
+.centro.talisman>.centro__default {
+    display: none;
+}
+
+.centro__default,
+.centro__talisman-selecionado {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
-.banner__imagem {
-    width: 350px;
-    margin-top: 10px;
+.centro__default .logo {
+    width: clamp(160px, calc(30vw + 1px), 440px);
 }
 
-.instrucao {
-    text-align: center;
-    font-family: var(--fonte-principal);
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-.selecionado__talisman-imagem {
-    width: 400px;
-}
-
-.selecionado__talisman-titulo {
-    text-transform: capitalize;
-    font-family: var(--fonte-principal);
-    font-weight: bold;
-    font-size: 28px;
-    background-color: rgba(255, 255, 255, .7);
-    padding: 5px 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-.selecionado__talisman-descricao {
-    width: 600px;
-    font-family: var(--fonte-principal);
-    font-size: 20px;
-    text-align: center;
+.centro__default>.instrucao {
+    padding: 2px 10px;
     color: white;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, .7);
-    border-radius: 20px;
+    background-color: rgba(34, 40, 49, .8);
+    border-radius: 5px;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: clamp(1.4rem, calc(2vw + 1px), 2.3rem);
 }
 
-.container__talismans {
-    height: 20vh;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    list-style-type: none;
+.centro__talisman-selecionado>.talisman-selecionado__img {
+    width: min(220px, 19vw);
 }
 
-.talisman>img {
-    width: 120px;
-    transition: .2s ease-in-out;
+.centro__talisman-selecionado>.talisman-selecionado__nome {
+    padding: 2px 10px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    text-wrap: nowrap;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: clamp(1.4rem, calc(2vw + 1px), 2.3rem);
+}
+
+.centro__talisman-selecionado>.talisman-selecionado__descricao {
+    width: 330px;
+    padding: 2px;
+    background-color: rgba(34, 40, 49, .8);
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: clamp(1.3rem, calc(2vw + 1px), 2rem);
+}
+
+.lista-talismans {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.lista-talismans>.container-talisman {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10%;
+    aspect-ratio: 1/1;
+    z-index: var(--indice-talisman);
+    transform: translate(-50%, -50%) rotate(calc((360deg / 12 * var(--indice-talisman))));
+}
+
+.container-talisman>.talisman {
+    width: min(150px, 15vw);
+    transform: translateX(-275%) rotate(calc((360deg / 12 * var(--indice-talisman)) * -1));
     cursor: pointer;
-}
+    position: relative;
 
-.talisman:hover {
-    transform: scale(1.2);
+    &:hover {
+        top: -2px;
+    }
 }
