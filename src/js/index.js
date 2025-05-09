@@ -2,6 +2,7 @@ const talismanImg = document.querySelector(".talisman-selecionado__img");
 const talismanNome = document.querySelector(".talisman-selecionado__nome");
 const talismanDescricao = document.querySelector(".talisman-selecionado__descricao");
 const listaTalismans = document.querySelector(".lista-talismans");
+const centro = document.querySelector(".centro");
 
 const talismansDados = {
     1: {
@@ -66,11 +67,18 @@ const talismansDados = {
     }
 };
 
+function alternaExibicaoCentro(conteudo) {
+    centro.classList.value = `centro ${conteudo}`;
+}
+
 function identificaClique(target) {
     if (target.classList.contains("talisman")) {
         const indice = target.parentElement.style.getPropertyValue("--indice-talisman")
-        exibeTalisman(indice);
-    } else { }
+        // exibeTalisman(indice);
+        alternaExibicaoCentro("talisman");
+    } else {
+        alternaExibicaoCentro("default");
+    }
 }
 
 window.addEventListener("click", (event) => {
