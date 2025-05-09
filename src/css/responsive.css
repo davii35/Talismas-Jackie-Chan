@@ -13,3 +13,18 @@
         transform: translateX(-50%);
     }
 }
+
+@media screen and (max-height: 640px) {
+    .centro__talisman-selecionado>.talisman-selecionado__nome {
+        font-size: clamp(1.4rem, calc(2dvh + 1px), 2.3rem);
+    }
+    .centro__talisman-selecionado>.talisman-selecionado__descricao {
+        font-size: clamp(1.4rem, calc(2dvh + 1px), 2.3rem);
+    }
+    .centro__talisman-selecionado>.talisman-selecionado__img {
+        width: 19dvh;
+    }
+    .container-talisman>.talisman {
+        width: 17dvh;
+    }
+}
